@@ -15,6 +15,7 @@ import { DateInput } from '@mantine/dates';
 import { schemaResolver, useForm } from '@mantine/form';
 import { toLabel } from '@/utils/toLabel';
 import { emptyAssessmentValues } from './formValues';
+import { sampleAssessment } from './sampleAssessment';
 import { assessmentSchema, MOBILITY, type Assessment } from './schema';
 
 const mobilityOptions = MOBILITY.map((value) => ({ value, label: toLabel(value) }));
@@ -80,7 +81,10 @@ export function AssessmentForm({ onSave }: AssessmentFormProps) {
           description="Patient or representative has given consent"
           {...form.getInputProps('consentObtained', { type: 'checkbox' })}
         />
-        <Group justify="flex-end">
+        <Group justify="space-between">
+          <Button variant="default" onClick={() => form.setValues(sampleAssessment)}>
+            Load sample patient
+          </Button>
           <Button type="submit" loading={form.submitting}>
             Save assessment
           </Button>
