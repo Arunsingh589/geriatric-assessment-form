@@ -2,7 +2,7 @@
 
 A one-page form a visiting nurse fills in when checking on an elderly patient at home. Built with React 19, TypeScript, Mantine (`@mantine/form`, `@mantine/dates`) and Zod 4, starting from the Mantine Vite template.
 
-**Live demo:** _TODO: add deployment URL_
+**Live demo:** https://geriatric-assessment-form-tndc.vercel.app/
 
 All patient data in this repo is invented.
 
@@ -46,8 +46,13 @@ src/
 
 ## Unfinished
 
-_TODO_
+Nothing. All requirements in the brief are implemented.
 
 ## Time spent
 
-_TODO: roughly how long you spent_
+About 1.5 hours in total:
+
+- ~20 min: reading the brief and the Mantine / Zod docs
+- ~15 min: environment setup (an older global Node 22 was shadowing Node 24; enabling Yarn 4 via Corepack)
+- ~25 min: schema wiring, form, tests and README, with an AI assistant; I reviewed every line
+- ~30 min: deploying to Vercel (Yarn 4 + Corepack needed a custom install command)
